@@ -1,0 +1,46 @@
+<html><head><title>Your computer has been hacked!</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<style>
+body {
+  font-family: consolas;
+}
+addr {
+  font-family: consolas;
+  color: blue;
+}
+p.b {
+  font-weight: bold;
+}
+.link {
+  color: blue;
+}
+red {
+  color: red;
+}
+</style></head><body>
+<h1>Your computer has been hacked!</h1>
+<p>Pay <red>10 Litecoins</red> to this address before <day></day>: <addr></addr></p>
+<p>If you don't, I will add this computer to my <bot>botnet!</bot></p>
+<p class="b">Instructions:</p>
+<ol>
+<li>Buy <red>10 litecoins</red> from <lit class='link'>HERE</lit><br>-Make sure you buy over one litecoin, because there is a transaction fee</li>
+<li>Send the litecoins here: <addr></addr></li>
+<li>You are done</li>
+<script>
+litecoin_address = "La1SN4fdJBBa7yW49F3smvC5AZgFY62yva";
+$("addr").text(litecoin_address);
+//https://www.snapcard.io/buy-litecoin
+$("lit").click(function(){
+  window.open("https://www.snapcard.io/buy-litecoin");
+});
+$("bot").click(function(){
+  window.open("https://en.wikipedia.org/wiki/Botnet");
+}
+var d = new Date(+new Date + 12096e5);
+month = d.getMonth();
+month = month + 1
+day = d.getDate();
+year = d.getFullYear();
+date = month + "/" + day + "/" + year
+$("day").text(date);
+</script>
